@@ -1,0 +1,71 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.menu{
+  background: green;
+
+}
+.menu ul{
+  display: flex;
+ text-align: center;
+  list-style: none;
+  justify-content: center;
+ 
+}
+.menu ul li{
+border-right: 1px solid red;
+
+}
+.menu ul li a{
+  text-decoration: none;
+    color: #fff;
+   padding: 10px 10px;
+   display: block;
+ 
+  
+}
+.menu ul li:first-child a{
+  border-left: 1px solid red;
+}
+.menu ul li:hover > a{
+  background: red;
+  color: #fff;
+
+}
+
+/** Drop- down*/
+.menu ul li{
+  position: relative;
+}
+.menu ul li ul{
+  position: absolute;
+  width: 120px;
+  left: 0;
+  top:100%;
+  background:black;
+  visibility: hidden;
+  opacity: 0;
+   transform-origin: top;
+  transform:scaleY(0);
+  transition:.6s;
+}
+.menu ul li:hover ul{
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  transform:scaleY(1);
+}
+.menu ul li ul li{
+  display: block;
+  margin-right:0px;
+  border: 0px;
+}
+.menu ul ul li:first-child a{
+    border-left:none;}
+    
+.menu ul li ul li a{
+  display: block;
+  border-bottom: 1px solid green;
+ 
+}
